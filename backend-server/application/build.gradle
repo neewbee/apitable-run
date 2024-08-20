@@ -10,6 +10,7 @@ plugins {
 
 dependencies {
     // shard module dependencies
+    implementation files('libs/pingpp-java-2.3.14.jar')
     implementation project(':shared:core')
     implementation project(':shared:starters:sms')
     implementation project(':shared:starters:mail')
@@ -89,7 +90,7 @@ dependencies {
         exclude(group: 'log4j', module: 'log4j')
     }
     implementation libs.auth0
-    implementation libs.pingpp
+//     implementation libs.pingpp
     implementation libs.alipay.easy
     implementation libs.wechatpay
     implementation libs.stripe
