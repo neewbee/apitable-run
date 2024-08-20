@@ -20,6 +20,7 @@ import { Module } from '@nestjs/common';
 import path from 'path';
 import fs from 'fs';
 import process from 'process';
+import {MyAction} from './my.action'
 
 export * as webhook from './webhook';
 export * as ruliu from './ruliu';
@@ -42,6 +43,9 @@ if (isEnterpriseLevel) {
 }
 
 @Module({
-  imports: [],
+  imports: [
+	  MyAction
+  ],
 })
+
 export class AutomationActionModule {}
